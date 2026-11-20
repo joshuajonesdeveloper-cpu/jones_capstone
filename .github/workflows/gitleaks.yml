@@ -1,0 +1,28 @@
+name: Gitleaks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Configure project token detection
+        run: |
+          cat > .gitleaks.toml <<'EOF'
+          title = "Ironside secret scanning"
+          [extend]
+          useDefault = true
+          [[rules]]
+          id = "project-api-token"
+          description = "Project API token"
+          regex = '''sk-proj-[A-Za-z0-9_-]{20,}'''
+          keywords = ["sk-proj-"]
+          EOF
+      - uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_CONFIG: .gitleaks.toml
+          GITLEAKS_ENABLE_COMMENTS: "false"
