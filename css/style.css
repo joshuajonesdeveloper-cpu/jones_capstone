@@ -1,0 +1,2 @@
+/* Compatibility path; all pages share the root stylesheet. */
+@import url("../styles.css");

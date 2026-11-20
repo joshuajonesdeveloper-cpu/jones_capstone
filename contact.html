@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page setup (WHAT IT IS). It tells the browser the character set, makes the page
+       fit phone screens, and gives the tab a title (WHAT IT DOES). width=device-width means the
+       page uses the phone's real width instead of zooming out like a desktop site (WHAT IT MEANS). -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Start a conversation about your goals and a training routine that fits your life.">
+  <title>Contact — Ironside Training Co.</title>
+
+  <!-- Google Fonts link (WHAT IT IS). It loads Oswald for headings and Source Sans 3 for body
+       text (WHAT IT DOES). display=swap means the text shows right away in a backup font and
+       switches once the real font loads, so nothing stays blank (WHAT IT MEANS). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- My one shared stylesheet (WHAT IT IS). All five pages link to it so they look the same
+       (WHAT IT DOES). The path css/style.css means "go into the css folder and find style.css" (WHAT IT MEANS). -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+    <a href="index.html" class="logo" aria-label="Ironside Training Co. home">
+      <!-- Hand-written barbell logo shared by every page. -->
+      <svg class="logo-mark" width="52" height="52" viewBox="0 0 64 64" role="img" aria-labelledby="ironside-logo-title" xmlns="http://www.w3.org/2000/svg">
+        <title id="ironside-logo-title">Ironside Training Co. barbell emblem</title>
+        <rect x="2" y="2" width="60" height="60" rx="14" fill="#20252b" />
+        <circle cx="32" cy="32" r="23" fill="none" stroke="#d86435" stroke-width="3" />
+        <path d="M12 32 H52" fill="none" stroke="#ffffff" stroke-width="4" />
+        <rect x="18" y="21" width="7" height="22" rx="2" fill="#ffffff" />
+        <rect x="39" y="21" width="7" height="22" rx="2" fill="#ffffff" />
+        <path d="M29 14 H35 M29 50 H35" fill="none" stroke="#d86435" stroke-width="3" />
+      </svg>
+      <span class="logo-text">Ironside</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<main id="main-content">
+<section class="page-hero"><h1>Contact</h1><p>Start a conversation about your goals and a training routine that fits your life.</p></section><section class="section-shell compact-section"><h2>Get in touch</h2><p>Email <a href="mailto:hello@ironsidetraining.com">hello@ironsidetraining.com</a> to ask about a free consultation.</p></section>
+</main>
+<footer class="site-footer">
+    <p class="footer-brand">Ironside Training Co.</p>
+    <p>Email: <a href="mailto:hello@ironsidetraining.com">hello@ironsidetraining.com</a></p>
+    <ul class="social-list">
+      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+    <p class="copyright">&copy; 2026 Ironside Training Co. &middot; Woodbridge, VA</p>
+  </footer>
+<script src="js/script.js"></script>
+</body>
+</html>

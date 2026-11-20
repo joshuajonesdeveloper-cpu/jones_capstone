@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page setup (WHAT IT IS). It tells the browser the character set, makes the page
+       fit phone screens, and gives the tab a title (WHAT IT DOES). width=device-width means the
+       page uses the phone's real width instead of zooming out like a desktop site (WHAT IT MEANS). -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ironside Training Co. is a small personal training gym in Woodbridge, VA. Book a free consultation.">
+  <title>Ironside Training Co. | Personal Training in Woodbridge, VA</title>
+
+  <!-- Google Fonts link (WHAT IT IS). It loads Oswald for headings and Source Sans 3 for body
+       text (WHAT IT DOES). display=swap means the text shows right away in a backup font and
+       switches once the real font loads, so nothing stays blank (WHAT IT MEANS). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- My one shared stylesheet (WHAT IT IS). All five pages link to it so they look the same
+       (WHAT IT DOES). The path css/style.css means "go into the css folder and find style.css" (WHAT IT MEANS). -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Site header, the same on all 5 pages (WHAT IT IS). It holds the logo on the left and the
+       nav on the right and sticks to the top when you scroll (WHAT IT DOES). The menu button only
+       shows under 768px, and aria-expanded tells screen readers if the menu is open or closed (WHAT IT MEANS). -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Ironside Training Co. home">
+      <!-- Hand-written barbell logo shared by every page. -->
+      <svg class="logo-mark" width="52" height="52" viewBox="0 0 64 64" role="img" aria-labelledby="ironside-logo-title" xmlns="http://www.w3.org/2000/svg">
+        <title id="ironside-logo-title">Ironside Training Co. barbell emblem</title>
+        <rect x="2" y="2" width="60" height="60" rx="14" fill="#20252b" />
+        <circle cx="32" cy="32" r="23" fill="none" stroke="#d86435" stroke-width="3" />
+        <path d="M12 32 H52" fill="none" stroke="#ffffff" stroke-width="4" />
+        <rect x="18" y="21" width="7" height="22" rx="2" fill="#ffffff" />
+        <rect x="39" y="21" width="7" height="22" rx="2" fill="#ffffff" />
+        <path d="M29 14 H35 M29 50 H35" fill="none" stroke="#d86435" stroke-width="3" />
+      </svg>
+      <span class="logo-text">Ironside</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area (WHAT IT IS). It holds everything unique to this page between the header
+       and footer (WHAT IT DOES). Using <main id="main-content"> tells browsers and screen readers "this is the real
+       content," so people can skip right to it (WHAT IT MEANS). -->
+  <main id="main-content">
+
+    <!-- Hero section (WHAT IT IS). It's the big first thing people see, with my headline, one
+         sentence about the gym, and the main button (WHAT IT DOES). The button goes to the contact
+         page because booking a free consult is the main goal of the whole site (WHAT IT MEANS). -->
+    <section class="hero">
+      <h1>Coaching that fits real life.</h1>
+      <p class="hero-sub">Personal training in Woodbridge for people who want a real plan, a real coach, and zero judgment.</p>
+      <a href="contact.html" class="btn btn-primary">Book a Free Consult</a>
+    </section>
+
+    <!-- Features section (WHAT IT IS). Three cards that explain why someone should train here
+         (WHAT IT DOES). Each emoji has aria-hidden="true" so screen readers skip it and just read the
+         card title and text, since the emoji is only decoration (WHAT IT MEANS). -->
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">Why train with us</h2>
+      <div class="card-row">
+        <article class="card">
+          <span class="card-icon" aria-hidden="true">🏋️</span>
+          <h3>1-on-1 Coaching</h3>
+          <p>A plan built around your goals, your schedule, and any old injuries, with a coach watching your form every rep.</p>
+        </article>
+        <article class="card">
+          <span class="card-icon" aria-hidden="true">👥</span>
+          <h3>Small Groups</h3>
+          <p>Train with up to six people. You get the energy of a class but you still actually get coached.</p>
+        </article>
+        <article class="card">
+          <span class="card-icon" aria-hidden="true">🥗</span>
+          <h3>Nutrition Help</h3>
+          <p>Simple eating habits that fit your life. No fad diets and no meal plans you'll quit after a week.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Studio section with my one image (WHAT IT IS). It shows a picture of the gym next to a short
+         paragraph (WHAT IT DOES). The alt text describes the picture for people who can't see it, and
+         the image shrinks on phones because of the img rule in my CSS (WHAT IT MEANS). -->
+    <section class="studio">
+      <img src="img/studio.jpg" alt="Illustration of the Ironside studio: a squat rack with a loaded barbell, a bench, a dumbbell rack, and two kettlebells on a dark rubber floor" width="1200" height="800">
+      <div class="studio-text">
+        <h2>A small gym, on purpose</h2>
+        <p>Ironside isn't a giant warehouse full of machines. It's one room, good equipment, and three coaches who learn your name on day one. Nobody is going to stare at you or make you feel lost.</p>
+      </div>
+    </section>
+
+    <!-- Repeat call-to-action (WHAT IT IS). A second button lower on the page that also goes to the
+         contact page (WHAT IT DOES). It's there so people who scrolled all the way down don't have to
+         scroll back up to the hero to sign up (WHAT IT MEANS). -->
+    <section class="cta-band">
+      <h2>Ready to get started?</h2>
+      <p>Your first session is free. No contract, no pressure.</p>
+      <a href="contact.html" class="btn btn-light">Contact Us</a>
+    </section>
+
+  </main>
+
+  <!-- Site footer, the same on all 5 pages (WHAT IT IS). It shows the contact email, social links,
+       and copyright (WHAT IT DOES). mailto: opens the visitor's email app, and rel="noopener" on the
+       social links is a safety setting for links that open in a new tab (WHAT IT MEANS). -->
+  <footer class="site-footer">
+    <p class="footer-brand">Ironside Training Co.</p>
+    <p>Email: <a href="mailto:hello@ironsidetraining.com">hello@ironsidetraining.com</a></p>
+    <ul class="social-list">
+      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+    <p class="copyright">&copy; 2026 Ironside Training Co. &middot; Woodbridge, VA</p>
+  </footer>
+
+  <!-- My one shared script (WHAT IT IS). It runs the mobile menu button (WHAT IT DOES). It goes right
+       before </body> so the HTML loads first and the script can find the button (WHAT IT MEANS). -->
+  <script src="js/script.js"></script>
+</body>
+</html>

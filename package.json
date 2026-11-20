@@ -1,0 +1,14 @@
+{
+  "name": "jones-capstone",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ironside Training Co. capstone website for ITD 210",
+  "scripts": {
+    "lint": "eslint js/script.js --max-warnings=0"
+  },
+  "devDependencies": {
+    "eslint": "10.15.0",
+    "eslint-plugin-security": "4.2.1",
+    "globals": "17.14.0"
+  }
+}
